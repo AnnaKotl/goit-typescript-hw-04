@@ -1,6 +1,6 @@
-import React, { useReducer } from "react";
-
 // Відповідь:
+
+import React, { useReducer } from "react";
 
 type RequestStep = "idle" | "start" | "pending" | "finished";
 

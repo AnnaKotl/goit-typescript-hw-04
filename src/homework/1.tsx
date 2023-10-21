@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-
 // Відповідь:
+
+import React, { useEffect, useRef } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -8,12 +8,12 @@ type Props = {
 };
 
 export function Observer({ children, onContentEndVisible }: Props) {
-  const endContentRef = useRef<HTMLDivElement>(null);
+  const endContentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const options: IntersectionObserver = {
+    const options: IntersectionObserverInit = {
       rootMargin: "0px",
-      threshold: 1.0,
+      thresholds: 1.0,
       root: null,
     };
 
